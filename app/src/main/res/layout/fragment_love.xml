@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:gravity="center"
+    android:background="@drawable/img_1"
     tools:context=".LoveFragment">
 
 

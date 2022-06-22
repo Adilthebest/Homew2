@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.hw2.databinding.FragmentBlankBinding
 import com.example.hw2.databinding.FragmentLoveBinding
 
-class BlankFragment : Fragment() {
+class SecondFragment : Fragment() {
 private lateinit var binding: FragmentBlankBinding
 
     override fun onCreateView(
