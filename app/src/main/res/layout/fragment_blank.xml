@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+
+    tools:context=".BlankFragment">
+
+
+ <TextView
+     android:id="@+id/firstName"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="300dp"
+     android:text="first name"
+     android:textColor="@color/black"
+     android:textSize="24sp"
+     android:textStyle="bold"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
+
+ <TextView
+     android:id="@+id/percent"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="50dp"
+     android:text="100%"
+     android:textColor="@color/black"
+     android:textSize="24sp"
+     android:textStyle="bold"
+     app:layout_constraintEnd_toEndOf="@id/firstName"
+     app:layout_constraintStart_toStartOf="@id/firstName"
+     app:layout_constraintTop_toBottomOf="@id/firstName" />
+
+ <TextView
+     android:id="@+id/secondName"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="50dp"
+     android:text="second name"
+     android:textColor="@color/black"
+     android:textSize="24sp"
+     android:textStyle="bold"
+     app:layout_constraintEnd_toEndOf="@id/percent"
+     app:layout_constraintStart_toStartOf="@id/percent"
+     app:layout_constraintTop_toBottomOf="@id/percent" />
+
+ <TextView
+     android:id="@+id/result"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="50dp"
+     android:text="Good choice"
+     android:textColor="@color/black"
+     android:textSize="24sp"
+     android:textStyle="bold"
+     app:layout_constraintEnd_toEndOf="@id/secondName"
+     app:layout_constraintStart_toStartOf="@id/secondName"
+     app:layout_constraintTop_toBottomOf="@id/secondName" />
+
+ <com.google.android.material.button.MaterialButton
+     android:id="@+id/tryAgainBtn"
+     android:layout_width="300dp"
+     app:cornerRadius="12dp"
+     android:text="Try again"
+     android:backgroundTint="#710CD6"
+     android:layout_marginTop="16dp"
+     android:layout_height="wrap_content"
+     app:layout_constraintEnd_toEndOf="@id/result"
+     app:layout_constraintStart_toStartOf="@id/result"
+     app:layout_constraintTop_toBottomOf="@id/result" />
+</LinearLayout>
