@@ -1,4 +1,4 @@
-package com.example.hw2
+package com.example.hw2.model
 
 import androidx.core.location.LocationRequestCompat
 import com.example.hw2.model.LoveModel

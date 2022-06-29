@@ -8,6 +8,6 @@ data class LoveModel(
     val firstname:String,
     @SerializedName("sname")
     val secondname:String,
-    val persenteg:String,
+    val percentage:String,
     val result:String
 )

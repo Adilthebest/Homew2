@@ -6,8 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
-
-    tools:context=".SecondFragment">
+android:background="@drawable/img_2"
+    tools:context=".fragment.SecondFragment">
 
  <ImageView
 

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loveFragment"
-        android:name="com.example.hw2.LoveFragment"
+        android:name="com.example.hw2.fragment.LoveFragment"
         android:label="fragment_love"
         tools:layout="@layout/fragment_love" >
         <action
@@ -17,7 +17,7 @@
     <fragment android:id="@+id/placeholder" />
     <fragment
         android:id="@+id/blankFragment"
-        android:name="com.example.hw2.SecondFragment"
+        android:name="com.example.hw2.fragment.SecondFragment"
         android:label="fragment_blank"
         tools:layout="@layout/second_blank" />
 </navigation>
