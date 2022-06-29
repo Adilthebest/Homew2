@@ -22,16 +22,16 @@ private lateinit var binding: SecondBlankBinding
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        initClick()
+//        initClick()
     }
-    private fun initClick() {
-        binding.tryAgainBtn.setOnClickListener {
-            findNavController().navigateUp()
+//    private fun initClick() {
+//        binding.tryAgainBtn.setOnClickListener {
+//            findNavController().navigateUp()
 
         }
-    }
 
 
-        }
+
+
 
 

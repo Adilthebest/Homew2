@@ -47,28 +47,6 @@ val viewModel:LoveViewModel by  viewModels()
 Log.e("ololo","initClickers:${it}")
 
                     })
-                App.loveApi.getPercentage(firstname,secondname).enqueue(object :
-                    Callback<LoveModel> {
-                    override fun onResponse(call: Call<LoveModel>, response: Response<LoveModel>) {
-                        if (response.isSuccessful)
-Log.e("ololo", "Response:${response.body()?.result}",)
-                        val bundle = Bundle()
-
-                        bundle.putString("firstName", response.body()?.firstname)
-                        bundle.putString("secondName", response.body()?.secondname)
-                        bundle.putString("percentage", response.body()?.persenteg)
-                        bundle.putString("result", response.body()?.result)
-
-                        findNavController().navigate(R.id.blankFragment, bundle)
-
-                    }
-
-                    override fun onFailure(call: Call<LoveModel>, t: Throwable) {
-                        Log.e("ololo", "onFailure:${t.message}",)
-
-
-                    }
-                })
             }
 
         }
