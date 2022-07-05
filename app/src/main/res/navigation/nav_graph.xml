@@ -14,10 +14,18 @@
             android:id="@+id/action_loveFragment_to_blankFragment"
             app:destination="@id/blankFragment" />
     </fragment>
-    <fragment android:id="@+id/placeholder" />
     <fragment
         android:id="@+id/blankFragment"
         android:name="com.example.hw2.fragment.SecondFragment"
         android:label="fragment_blank"
         tools:layout="@layout/second_blank" />
+    <fragment
+        android:id="@+id/boardFragment2"
+        android:name="com.example.hw2.fragment.BoardFragment"
+        android:label="fragment_board"
+        tools:layout="@layout/fragment_board" >
+        <action
+            android:id="@+id/action_boardFragment2_to_loveFragment"
+            app:destination="@id/loveFragment" />
+    </fragment>
 </navigation>

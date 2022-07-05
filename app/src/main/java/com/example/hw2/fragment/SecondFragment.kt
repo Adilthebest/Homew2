@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.hw2.databinding.FragmentLoveBinding
 import com.example.hw2.databinding.SecondBlankBinding
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 
 class SecondFragment : Fragment() {
 private lateinit var binding: SecondBlankBinding
