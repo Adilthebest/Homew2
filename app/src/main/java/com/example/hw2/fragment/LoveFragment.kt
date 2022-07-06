@@ -50,14 +50,19 @@ val viewModel:LoveViewModel by  viewModels()
             bTnNext.setOnClickListener{
                 val firstname = editFname.text.toString()
                 val secondname = editSname.text.toString()
-                viewModel.getLiveLoveViewModel(firstname,secondname).observe(viewLifecycleOwner,
-                    Observer {
-Log.e("ololo","initClickers:${it}")
+                viewModel.getLiveLoveViewModel(firstname,secondname).observe(viewLifecycleOwner
+                ) { loveModel ->
+                    Log.e("ololo", "initClickers:${loveModel}")
+                    App.dp.historyDao().insert(loveModel)
+                }
 
-                    })
+                    }
+            bTnHistory.setOnClickListener {
+                findNavController().navigate(R.id.action_loveFragment_to_historyFragment)
+                }
             }
 
         }
 
     }
-}
+

@@ -5,17 +5,21 @@ import androidx.lifecycle.MutableLiveData
 import com.example.hw2.App
 import com.example.hw2.model.LoveApi
 import com.example.hw2.model.LoveModel
+import com.example.hw2.room.AppDataBase
+import com.example.hw2.room.HistoryDao
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
 
 class Repository @Inject constructor( private val api: LoveApi){
+lateinit var dao :HistoryDao
     fun getMutableLiveDataOfLoveData(
         firstName: String,
         secondName: String
     ): MutableLiveData<LoveModel> {
         val liveLoveModel : MutableLiveData<LoveModel> = MutableLiveData()
+        dao.getAll()
         api.getPercentage(firstName, secondName).enqueue(object :
             Callback<LoveModel> {
             override fun onResponse(call: Call<LoveModel>, response: Response<LoveModel>) {

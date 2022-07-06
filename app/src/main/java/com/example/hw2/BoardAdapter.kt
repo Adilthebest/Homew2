@@ -7,13 +7,17 @@ import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hw2.databinding.ItemBoardBinding
+import dagger.Provides
 import javax.inject.Inject
 
 class BoardAdapter (val context:Context, val navController: NavController ) : RecyclerView.Adapter<BoardAdapter.BoardViewHolder>() {
     private val data = arrayListOf<Board>()
 
+/*
 
-
+@Inject
+private lateinit var prefs: Prefs
+*/
 
     inner class BoardViewHolder(private var binding: ItemBoardBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -27,10 +31,10 @@ class BoardAdapter (val context:Context, val navController: NavController ) : Re
             } else {
                 binding.btnStart.visibility = View.INVISIBLE
 
-              /*  binding.btnStart.setOnClickListener {
+             /*  binding.btnStart.setOnClickListener {
                   prefs.isShown()
                     navController.navigateUp()
-                }*/
+               */
 
             }
         }
