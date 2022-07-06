@@ -10,7 +10,7 @@ import com.example.hw2.model.LoveModel
 interface HistoryDao {
     @Insert
     fun insert(model:LoveModel)
-    @Query("SELECT * FROM love_model ORDER BY id ASC")
+    @Query("SELECT * FROM love_model ORDER BY firstname ASC")
     fun getAll():LiveData<List<LoveModel>>
 
 }
