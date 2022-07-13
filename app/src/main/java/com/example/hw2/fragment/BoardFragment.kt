@@ -8,11 +8,9 @@ import android.view.ViewGroup
 import androidx.activity.addCallback
 import androidx.navigation.fragment.findNavController
 import com.example.hw2.Board
-import com.example.hw2.BoardAdapter
 import com.example.hw2.R
 import com.example.hw2.databinding.FragmentBoardBinding
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class BoardFragment  : Fragment() {

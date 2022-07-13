@@ -1,4 +1,4 @@
-package com.example.hw2
+package com.example.hw2.fragment
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,18 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.hw2.Board
+import com.example.hw2.Prefs
 import com.example.hw2.databinding.ItemBoardBinding
-import dagger.Provides
 import javax.inject.Inject
 
 class BoardAdapter (val context:Context, val navController: NavController ) : RecyclerView.Adapter<BoardAdapter.BoardViewHolder>() {
     private val data = arrayListOf<Board>()
 
-/*
+
 
 @Inject
 private lateinit var prefs: Prefs
-*/
+
 
     inner class BoardViewHolder(private var binding: ItemBoardBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -31,11 +32,12 @@ private lateinit var prefs: Prefs
             } else {
                 binding.btnStart.visibility = View.INVISIBLE
 
-             /*  binding.btnStart.setOnClickListener {
-                  prefs.isShown()
+                binding.btnStart.setOnClickListener {
+                    prefs.isShown()
                     navController.navigateUp()
-               */
 
+
+                }
             }
         }
     }

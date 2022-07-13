@@ -10,14 +10,27 @@ import dagger.hilt.android.HiltAndroidApp
 @HiltAndroidApp
 class App: Application() {
 
-companion object{
-    lateinit var dp : AppDataBase
+    companion object {
+        lateinit var dataBase: AppDataBase
+        fun getInstance(): AppDataBase {
+            return dp
 
-}
-    override fun onCreate() {
-        super.onCreate()
-        dp = Room.databaseBuilder(this,AppDataBase::class.java
-            ,"love-base").allowMainThreadQueries().build()
+        }
+
+        lateinit var dp: AppDataBase
+
     }
 
+    override fun onCreate() {
+        super.onCreate()
+        dp = Room.databaseBuilder(
+            this, AppDataBase::class.java, "love-base"
+        ).allowMainThreadQueries().build()
+    }
+
+    fun getDatabase(): AppDataBase {
+        return dataBase
+
+
+    }
 }

@@ -9,12 +9,18 @@
     android:background="@drawable/img_1"
     tools:context=".fragment.LoveFragment">
 
-
+<Button
+    android:background="@drawable/ic_baseline_delete_24"
+    android:layout_width="50dp"
+    android:id="@+id/delete"
+    android:visibility="visible"
+    android:layout_height="50dp"/>
     <EditText
         android:id="@+id/edit_fname"
         android:hint="men"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <EditText
         android:id="@+id/edit_sname"
         android:hint="women"

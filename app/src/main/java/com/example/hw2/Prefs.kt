@@ -1,15 +1,19 @@
 package com.example.hw2
 
 import android.content.Context
+import android.content.SharedPreferences
+import javax.inject.Inject
 
-class Prefs ( context: Context) {
-    var preferences = context.getSharedPreferences("setting", Context.MODE_PRIVATE)
+class Prefs(context: Context) {
+
+    var prefs: SharedPreferences = context.getSharedPreferences("setting", Context.MODE_PRIVATE)
+
     fun saveState() {
-        preferences.edit().putBoolean("isShow", true).apply()
+        prefs.edit().putBoolean("isShow", true).apply()
     }
 
     fun isShown(): Boolean {
-        return preferences.getBoolean("isShown", false)
+        return prefs.getBoolean("isShown", false)
 
     }
 

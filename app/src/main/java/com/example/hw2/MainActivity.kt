@@ -1,5 +1,6 @@
 package com.example.hw2
 
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
@@ -10,18 +11,21 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity: AppCompatActivity() {
+    @Inject
+    private lateinit var prefs: Prefs
+
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-   /*     navController = findNavController(R.id.nav_host_fragment)*/
+       navController = findNavController(R.id.nav_host_fragment)
 
-        /*prefs.saveState()
+       prefs.saveState()
         if (prefs.isShown()) {
             navController.navigate(R.id.boardFragment2)
         }
-    }*/
+
     }
 }

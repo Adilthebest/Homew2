@@ -25,10 +25,10 @@ import retrofit2.Response
 
 class LoveFragment : Fragment() {
 
-private lateinit var binding: FragmentLoveBinding
+    private lateinit var binding: FragmentLoveBinding
     private lateinit var navController: NavController
 
-val viewModel:LoveViewModel by  viewModels()
+    val viewModel: LoveViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -46,23 +46,29 @@ val viewModel:LoveViewModel by  viewModels()
     }
 
     private fun initClickers() {
-        with(binding){
-            bTnNext.setOnClickListener{
+        with(binding) {
+            bTnNext.setOnClickListener {
                 val firstname = editFname.text.toString()
                 val secondname = editSname.text.toString()
-                viewModel.getLiveLoveViewModel(firstname,secondname).observe(viewLifecycleOwner
+                viewModel.getLiveLoveViewModel(firstname, secondname).observe(
+                    viewLifecycleOwner
                 ) { loveModel ->
                     Log.e("ololo", "initClickers:${loveModel}")
                     App.dp.historyDao().insert(loveModel)
                 }
 
-                    }
-            bTnHistory.setOnClickListener {
-                findNavController().navigate(R.id.action_loveFragment_to_historyFragment)
+            }
+                bTnHistory.setOnClickListener {
+                    findNavController().navigate(R.id.historyFragment)
                 }
+
             }
 
-        }
 
+        }
+    private fun rename() {
+        val editText = arguments?.getString("key1")
+        binding.editFname.setText(editText)
     }
+}
 

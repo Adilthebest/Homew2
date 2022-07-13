@@ -43,5 +43,9 @@
         android:id="@+id/historyFragment"
         android:name="com.example.hw2.fragment.HistoryFragment"
         android:label="fragment_history"
-        tools:layout="@layout/fragment_history" />
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_loveFragment"
+            app:destination="@id/loveFragment" />
+    </fragment>
 </navigation>
